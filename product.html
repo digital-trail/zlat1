@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Карточка товара"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<!--  -->
+		<main class="page page_inner">
+			<div class="page__header">
+				<div class="page__container">
+					<nav class="page__breadcrumbs breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item">
+								<a href="home.html" class="breadcrumbs__link">Главная</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<a href="catalog.html" class="breadcrumbs__link">Разделочные ножи</a>
+							</li>
+							<li class="breadcrumbs__item">
+								<!-- ? обычно конечная страница не делается ссылкой поэтому тут span -->
+								<span href="" class="breadcrumbs__current">Нож Сёгун</span>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="product">
+				<div class="product__container">
+					<div class="product__main main-product">
+						<div class="main-product__images images-product">
+							<!-- !верхние картинки -->
+							<div class="images-product__slider">
+								<div class="images-product__swiper">
+									<div class="images-product__slide-ibg">
+										<img src="img/product/01.webp" alt="">
+									</div>
+									<div class="images-product__slide-ibg">
+										<img src="img/product/02.webp" alt="">
+									</div>
+									<div class="images-product__slide-ibg">
+										<img src="img/product/03.webp" alt="">
+									</div>
+									<div class="images-product__slide-ibg">
+										<img src="img/product/04.webp" alt="">
+									</div>
+									<div class="images-product__slide-ibg">
+										<img src="img/product/01.webp" alt="">
+									</div>
+								</div>
+							</div>
+							<!-- !нижние картинки -->
+							<div class="images-product__thumbs thumbs-images">
+								<div class="thumbs-images__swiper">
+									<div class="thumbs-images__slide-ibg">
+										<img src="img/product/01.webp" alt="">
+									</div>
+									<div class="thumbs-images__slide-ibg">
+										<img src="img/product/02.webp" alt="">
+									</div>
+									<div class="thumbs-images__slide-ibg">
+										<img src="img/product/03.webp" alt="">
+									</div>
+									<div class="thumbs-images__slide-ibg">
+										<img src="img/product/04.webp" alt="">
+									</div>
+									<div class="thumbs-images__slide-ibg">
+										<img src="img/product/01.webp" alt="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-product__body body-product">
+							<div class="body-product__header header-product">
+								<div class="header-product__line">
+									<h1 class="header-product__title">Нож Сёгун</h1>
+									<a href="" class="header-product__link _icon-compare"></a>
+									<a href="" class="header-product__link _icon-favorite"></a>
+								</div>
+								<div class="header-product__rating rating">
+									<div class="rating__body">
+										<div class="rating__active"></div>
+										<div class="rating__items">
+											<input type="radio" class="rating__item" value="1" name="rating">
+											<input type="radio" class="rating__item" value="2" name="rating">
+											<input type="radio" class="rating__item" value="3" name="rating">
+											<input type="radio" class="rating__item" value="4" name="rating">
+											<input type="radio" class="rating__item" value="5" name="rating">
+										</div>
+									</div>
+									<div class="rating__value">3.6</div>
+								</div>
+							</div>
+							<div class="body-product__table table-product">
+								<div class="table-product__label">Артикул</div>
+								<div class="table-product__value">AF0000001953</div>
+								<div class="table-product__label">Торговая марка:</div>
+								<div class="table-product__value">Grand Way</div>
+								<div class="table-product__label">Серия:</div>
+								<div class="table-product__value">Ножи серии Classic Ikon</div>
+								<div class="table-product__label">Бонусные баллы: </div>
+								<div class="table-product__value">39</div>
+							</div>
+							<div class="body-product__options options-product">
+								<div class="options-product__label">Сталь</div>
+								<div class="options-product__value">
+									<select name="form[]" class="form">
+										<option value="1" selected> Дамасская сталь</option>
+										<option value="2">Пункт №2</option>
+										<option value="3">Пункт №3</option>
+										<option value="4">Пункт №4</option>
+									</select>
+								</div>
+								<div class="options-product__label">Рукоять</div>
+								<div class="options-product__value">
+									<select name="form[]" class="form">
+										<option value="1" selected>Шнур, Латунь</option>
+										<option value="2">Пункт №2</option>
+										<option value="3">Пункт №3</option>
+										<option value="4">Пункт №4</option>
+									</select>
+								</div>
+								<div class="options-product__label">Гарда и тыльник</div>
+								<div class="options-product__value">
+									<select name="form[]" class="form">
+										<option value="1" selected>Тыльник латунь</option>
+										<option value="2">Пункт №2</option>
+										<option value="3">Пункт №3</option>
+										<option value="4">Пункт №4</option>
+									</select>
+								</div>
+								<div class="options-product__label">Обработка клинка</div>
+								<div class="options-product__value">
+									<select name="form[]" class="form">
+										<option value="1" selected>Выбрать обработку клинка</option>
+										<option value="2">Пункт №2</option>
+										<option value="3">Пункт №3</option>
+										<option value="4">Пункт №4</option>
+									</select>
+								</div>
+							</div>
+							<div class="body-product__actions actions-product">
+								<div class="actions-product__price">95</div>
+								<div class="actions-product__row">
+									<div class="actions-product__quantity quantity">
+										<button type="button" class="quantity__button quantity__button_plus"></button>
+										<div class="quantity__input">
+											<input autocomplete="off" type="text" name="form[]" value="1">
+										</div>
+										<button type="button" class="quantity__button quantity__button_minus"></button>
+									</div>
+									<div class="actions-product__buttons">
+										<a href="" class="actions-product__cart button"><span class="_icon-cart">В
+												карзину</span></a>
+										<a href="" class="actions-product__button button button_black">
+											Купить в 1 клик</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-tabs="992" class="product__info product-info">
+						<nav data-tabs-titles class="product-info__navigation">
+							<button type="submit" class="product-info__title _tab-active">Описание</button>
+							<button type="submit" class="product-info__title">Характеристика</button>
+							<button type="submit" class="product-info__title">Отзывы</button>
+							<button type="submit" class="product-info__title">Доставка</button>
+						</nav>
+						<div data-tabs-body class="product-info__content">
+							<div class="product-info__body">
+								<p> Компания Grand Way более 15 лет занимается изготовлением ножей, мультитулов, кухонной
+									атрибутики
+									и товаров туристического назначения, успешно конкурирует в таких странах как Украина, США,
+									Словакия, Австралия. В своих изделиях компании удалось воплотить утопическую задачу - собрать
+									самое лучшее, наработанное десятками лет в сфере ножевой индустрии, и выпускать ножи высокого
+									качества по приемлемым ценам, доступным широкому кругу потребителей.</p>
+								<br>
+
+								<p>
+									Нож туристический Grand Way, 2307 HRD (дамаск) - исключительный по своей красоте клинок,
+									способный покорить сердце ножемана с первого взгляда. Дамаск овеян многочисленными легендами
+									и
+									мифами. Само его наличие в современном ноже привлекает внимание. Долгое время дамаск был
+									одним
+									из наиболее прочных и надежных видов стали, доступных человечеству. Если разобраться, то
+									дамаск
+									представляет собой многократно перекованную стальную заготовку, в которой чередуются твердые
+									и
+									вязкие слоя стали. В результате длительной перековки получается материал с характерным
+									волнистым
+									или зернистым рисунком с высокими потребительскими качествами. Одним из недостатков дамасской
+									стали можно считать практически полное отсутствие легирующих элементов, что приводит к
+									подверженности коррозии. Лезвие
+									из дамаска хорошо режет, долго сохраняет заточку, однако нуждается в своевременной очистке и
+									уходе
+								</p>
+							</div>
+							<div class="product-info__body">
+								Форма клинка – американский танто, ее сложно спутать с какой-то другой. Такое лезвие может
+								выдержать значительные нагрузки, обладает хорошей проникающей способностью, а также отличается
+								наличием двух режущих кромок, которые можно заточить по-разному.
+								Рукоять туристического ножа Grand Way, 2307 HRD оформлена из латунного основания с обмоткой из
+								шнура паракорда. Этот вариант придает ножу легкость и практичность, а также делает модель схожей
+								с классической катаной. Модель комплектуется кожаным чехлом для переноски и хранения
+							</div>
+							<div class="product-info__body">
+								У данного товара нет отзывов. Станьте первым, кто оставил отзыв об этом товаре!
+							</div>
+							<div class="product-info__body">
+								По всей Украине, Европе и США
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ! Блок-Похожие товары======================================================== -->
+			<section class="page__similar-products similar-products similar-products_no-bottom">
+				@@include('html/_products-slider.htm',{
+				"title":"Похожие товары",
+				"moretext":"Все похожие товары"
+				})
+			</section>
+			<!-- ! Блок-Рекомендуем======================================================== -->
+			<section class="page__sale-products sale-products">
+				@@include('html/_products-slider.htm',{
+				"title":"Рекомендуем",
+				"moretext":"Все рекомендуемые товары"
+				})
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	<!-- @@include('html/_popup.htm',{}) -->
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

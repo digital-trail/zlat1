@@ -1,0 +1,355 @@
+.catalog {
+	@include adaptiveValue("padding-bottom",120 ,40 );
+	// .catalog__container
+	&__container {
+		
+	}
+
+	// .catalog__body
+	&__body {
+		display: grid;
+		align-items: start;
+		
+		gap: rem(30);
+		@media (min-width:$tablet){
+			  grid-template-columns: rem(375) 1fr;
+		}
+		
+	}
+
+	// .catalog__filter
+	&__filter {
+		// @media (min-width:$mobile){
+		// 	grid-template-columns: rem(270) 1fr;
+		// 	align-items: self-end;
+		// }
+		}
+
+	// .catalog__content
+	&__content {}
+
+	// .catalog__control
+	&__control {
+		display: flex;
+		justify-content: flex-end;
+		&:not(:last-child) {margin-bottom: rem(20);}
+	}
+	// !-- ? карточки
+	// .catalog__products
+	&__products {
+		display: grid;
+		gap: rem(30);
+		// ?Адаптация
+		grid-template-columns: repeat(auto-fill, minmax(rem(270), rem(375)));
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom",60 ,30 );
+		}
+	}
+
+// ! Пагинация
+
+		// .catalog__footer
+		&__footer {
+			display: flex;
+			justify-content: space-between;
+			gap: rem(20);
+			@media (min-width:$tablet){
+				  flex-direction: column;
+			}
+		}
+
+		// .catalog__more
+		&__more {}
+
+		// .catalog__pagging
+		&__pagging {}
+}
+//========================================================================================================================================================
+
+// !Фильтр раздел
+
+.filter-catalog {
+	background: #fefefe;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+	// .filter-catalog__title
+	&__title {
+		min-width: 100%;
+		background-color: $mainDarkColor;
+		
+		font-weight: bold;
+		font-size: rem(20);
+		line-height: math.div(24 ,20 );
+		padding: rem(20) rem(30);
+		margin-bottom: rem(5);
+		color: #fff;
+		@media (max-width: 475px){
+			text-align: left;
+			// margin: 0 auto; /* Центрирует элемент по горизонтали */
+			// width: 80%; /* Задаем новую ширину элемента для планшетов */
+		}
+	}
+
+	// .filter-catalog__items
+
+	&__items {
+		@media (max-width:$tablet){
+			  display: none;
+			  &._active {
+				display: block;
+			  }
+		}
+	}
+
+	// .filter-catalog__price
+
+	&__price {}
+}
+.price-filter {
+	// padding: rem(30) 0;
+	// .price-filter__title
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
+		width: 100%;
+		&::before{
+			color: $mainOrangeColor;
+			font-size: rem(9);
+			transform: rotate(-180deg);
+			transition: transform 0.3s ease 0s;
+		}
+		&._spoller-active{
+			&::before{
+				transform: rotate(0deg);
+				
+			}
+		}
+	}
+
+	// .price-filter__body
+
+	&__body {
+		padding: rem(30) rem(15);
+	}
+
+	// .price-filter__inputs
+
+	&__inputs {
+		display: flex;
+		border: 1px solid #4c3e3e;
+		border-radius: rem(3);
+		overflow: hidden;
+		&:not(:last-child) {margin-bottom: rem(60);}
+	}
+
+	// .price-filter__input
+
+	&__input {
+		width: 50%;
+		height: rem(42);
+		text-align: center;
+		padding: 0px rem(15);
+		&:not(:last-child) {
+			border-right: 1px solid #cbcbcb;
+		}
+	}
+
+	// .price-filter__range
+
+	&__range {
+		// ? толщина ползунка
+		height: rem(5);
+	}
+}
+
+//========================================================================================================================================================
+//!-- ! Раздел ЧЕКБОКС --
+
+.item-filter-catalog {
+	&:not(:last-child) {
+		margin-bottom: rem(5);
+	}
+
+	// .item-filter-catalog__title
+	&__title {
+		background-color: $mainDarkColor;
+		width: 100%;
+		color: #fff;
+		padding: rem(13) rem(30);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
+		&:not(:last-child) {
+			margin-bottom: rem(5);
+		}
+		&::before{
+			color: $mainOrangeColor;
+			font-size: rem(9);
+			transform: rotate(-180deg);
+			transition: transform 0.3s ease 0s;
+		}
+		&._spoller-active{
+			&::before{
+				transform: rotate(0deg);
+				
+			}
+		}
+
+	}
+
+	// .item-filter-catalog__body
+
+	// &__body {
+	// 	padding: rem(33);
+
+	// }
+	
+
+	// .item-filter-catalog__checkbox
+	&__checkbox {
+		&:not(:last-child) {margin-bottom: rem(22);}
+	}
+	
+}
+// ! подраздел РЕЙТИНГ
+
+// .item-filter-catalog {
+
+// 	// .item-filter-catalog__title
+
+// 	&__title {}
+
+// 	// .item-filter-catalog__body
+
+// 	&__body {}
+
+// 	// .item-filter-catalog__checkbox
+
+// 	&__checkbox {}
+// }
+
+.checkbox {
+
+	// // .checkbox__input
+
+	// &__input {}
+
+	// // .checkbox__label
+
+	// &__label {}
+
+	// .checkbox__label-rating
+	&__label-rating {
+		display: flex;
+		gap: rem(13);
+	// column-gap: rem(3);
+	align-items: flex-start;
+	color: $mainOrangeColor;
+	font-size: rem(25);
+	line-height: math.div( 23, 21);
+	// margin-bottom: 33px;
+	span {
+		
+		font-weight: 500;
+		font-size: rem(17);
+		line-height: math.div(17 ,11 );
+		color: #141414;
+	}
+	}
+
+.rating-5::before {
+	content:"★★★★★";
+}
+.rating-4::before {
+	content:"★★★★";
+}
+.rating-3::before {
+	content:"★★★";
+}
+.rating-2::before {
+	content:"★★";
+}
+.rating-1::before {
+	content:"★";
+}
+}
+
+// todo Медиазапросов для скрытия содержимого при достижении определенной ширины экрана
+@media (max-width: 1024px) {
+	// Скрыть содержимое блоков фильтра товаров
+	.item-filter-catalog__body,
+	.price-filter__body {
+		display: none; // Скрываем все содержимое
+	}
+
+	// Убираем модификатор _spoller-active при достижении определенной ширины экрана
+	.item-filter-catalog__title,
+	.price-filter__title {
+		&._spoller-active + .item-filter-catalog__body,
+		&._spoller-active + .price-filter__body {
+			display: none; // Игнорируем класс _spoller-active и скрываем содержимое
+		}
+	}
+}
+
+// @media (max-width: 768px) {
+// 	.catalog {
+// 		&__body {
+// 			grid-template-columns: 1fr;
+// 		}
+
+// 		&__products {
+// 			grid-template-columns: 1fr;
+// 		}
+// 	}
+
+// 	.filter-catalog {
+// 		padding: rem(10);
+
+// 		&__title {
+// 			font-size: rem(16);
+// 			padding: rem(10) rem(15);
+// 		}
+
+// 		.price-filter__title {
+// 			font-size: rem(16);
+// 			padding: rem(10) rem(15);
+// 		}
+
+// 		.price-filter__body {
+// 			padding: rem(10) rem(10);
+// 		}
+
+// 		.price-filter__inputs {
+// 			flex-direction: column;
+
+// 			.price-filter__input {
+// 				width: 100%;
+// 				margin-bottom: rem(10);
+
+// 				&:not(:last-child) {
+// 					border-right: none;
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	.item-filter-catalog {
+// 		&__title {
+// 			font-size: rem(16);
+// 			padding: rem(10) rem(15);
+// 		}
+
+// 		&__body {
+// 			padding: rem(10);
+// 		}
+// 	}
+// }
+
+
+
+

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Верстка «NEW_PROJECT_NAME»</title>
+</head>
+
+<body>
+	<div class="rootpage">
+		<div class="rootpage__container">
+			<div class="rootpage__content">
+				<h1>Верстка «Zlatmax»</h1>
+				<div class="rootpage__info">
+					Особенности проекта
+				</div>
+				<h2>Готовые страницы:</h2>
+				<ol class="rootpage__list">
+					<li><a target="_blank" href="home.html">Главная</a></li>
+					<li><a target="_blank" href="catalog.html">Каталог</a></li>
+					<li><a target="_blank" href="product.html">Карточка товара</a></li>
+				</ol>
+				<h2>Попапы:</h2>
+				<ol class="rootpage__list">
+					<li><a target="_blank" href="home.html#"></a></li>
+				</ol>
+				<div class="rootpage__tnx">
+					<h2>Спасибо за заказ!</h2>
+					<p>Буду рад хорошему отзыву.</p>
+					<p>Обращайтесь еще!</p>
+					<p>Хорошего Вам дня!</p>
+				</div>
+				<div class="rootpage__contacts">
+					<h2>Мои контакты:</h2>
+					<p>Почта: <a href="mailto:tonstyleua@gmail.com">tonstyleua@gmail.com</a></p>
+					<p>Телефон: <a href="tel:0986170273">098 617 02 73</a></p>
+					<p>Соц. сеть: <a href="https://www.instagram.com/yuriy_smoliarov/">ссылка на соц. сеть</a></p>
+				</div>
+			</div>
+			<div class="rootpag__images">
+				<img src="img/fed01.png" alt="Изображение">
+			</div>
+		</div>
+	</div>
+</body>
+<style>
+	@charset "UTF-8";
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
+	*,
+	*::before,
+	*::after {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		min-width: 320px;
+		width: 100%;
+		color: #fff;
+		/* background-image: linear-gradient(135deg, #5b5e78 0, #2e477b 50%, #001b64 100%); */
+		/* background-color: #2c4dab; мой первый вариант*/
+		/* background-color: #6a6aef; вариант с картинки*/
+		background-color: #5252de;
+	}
+
+	body {
+		font-family: Montserrat;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 1rem;
+	}
+
+	a {
+		text-decoration: underline;
+		color: #ebe691
+	}
+
+	a:visited {
+		text-decoration: underline;
+		color: #f0eb8d;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	ul li {
+		list-style: none;
+	}
+
+	img {
+		vertical-align: top;
+	}
+
+	.wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+	}
+
+	.rootpage {}
+
+	.rootpage__container {
+		display: flex;
+		/* gap: rem(50); */
+	}
+
+	.rootpage__content {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+
+	}
+
+	@media (max-width:565px) {
+		.rootpage__container {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: flex-start;
+		}
+
+	}
+
+	@media (max-width: 767px) {
+		.rootpage {
+			padding: 30px 15px;
+		}
+	}
+
+	h1 {
+		text-shadow: 5px 5px 7px rgb(76, 73, 54);
+		color: #ebe691;
+		font-size: 2.5rem;
+		margin: 0px 0px 1.25rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h1 {
+			text-shadow: 5px 5px 7px rgb(76, 73, 54);
+			font-size: 1.85rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+	}
+
+	h2 {
+		color: #e4ba7c;
+		text-shadow: 1px 1px 5px rgb(76, 73, 54);
+		font-size: 1.25rem;
+		margin: 0px 0px 1rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			font-size: 1.125rem;
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.rootpage__info {
+		line-height: 140%;
+		margin: 0px 0px 1.5rem 0px;
+	}
+
+	.rootpage__list {
+		margin: 0px 0px 2.25rem 1.25rem;
+	}
+
+	.rootpage__list li:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.rootpage__contacts,
+	.rootpage__tnx {
+		border-radius: 30px;
+		padding: 20px 65px;
+		line-height: 140%;
+	}
+
+	@media (max-width: 767px) {
+
+		.rootpage__contacts,
+		.rootpage__tnx {
+			border-radius: 30px;
+			padding: 20px;
+		}
+	}
+
+
+	.rootpage__contacts {
+		background: #629290;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+			-23px 0 20px -23px rgba(0, 0, 0, .6),
+			23px 0 20px -23px rgba(0, 0, 0, .6),
+			inset 0 0 40px rgba(0, 0, 0, .1);
+	}
+
+	.rootpage__contacts a {
+		color: #ede666;
+	}
+
+	.rootpage__tnx {
+		background: #ce5a57;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+			-23px 0 20px -23px rgba(0, 0, 0, .6),
+			23px 0 20px -23px rgba(0, 0, 0, .6),
+			inset 0 0 40px rgba(0, 0, 0, .1);
+		margin: 0px 0px 1rem 0px;
+	}
+
+	.rootpag__images {
+		margin-left: 200px;
+		max-width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 967px) {
+			margin-left: 90px;
+		}
+	}
+
+
+	@media (max-width:565px) {
+		.rootpage__content {
+			padding: 3px 30px 30px 30px;
+		}
+
+		/* .rootpag__images {
+			max-width: 100%;
+		} */
+
+		img {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	img {
+		/* margin-left: 350px; */
+		max-width: 100%;
+		min-width: 330px;
+		position: relative;
+
+		/* height: 100%; */
+	}
+</style>
+
+</html>

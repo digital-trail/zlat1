@@ -1,0 +1,193 @@
+.torch-slider {
+	// .torch-slider__container
+	&__container {
+	}
+	// .torch-slider__header
+	&__header {
+	  
+	  &:not(:last-child) {
+		 @include adaptiveValue("margin-bottom", 50, 30);
+	  }
+	  @media (min-width:$mobile){
+		 display: flex;
+		  align-items: center;
+		  justify-content: space-between;
+		  gap: rem(20);
+	  }
+	}
+	// .torch-slider__title
+	&__title {
+	  letter-spacing: 0.05em;
+	  font-size: rem(30);
+	  font-weight: 700;
+	  line-height: math.div(46, 30);
+	}
+	// .torch-slider__more
+	&__more {
+	  color: rgba(20, 20, 20, 0.59);
+	  transition: color 0.3s ease 0s;
+	  font-weight: 600;
+	  font-size: rem(18);
+	  display: inline-flex;
+	  align-items: center;
+	  gap: em(15, 18);
+	  &::after {
+		 @extend %ic;
+		 content: "\e900";
+		 transform: rotate(-90deg);
+		 color: $mainOrangeColor;
+		 font-size: em(7, 18);
+	  }
+	  @media (any-hover: hover) {
+		 &:hover {
+			color: rgba(20, 20, 20, 1);
+		 }
+	  }
+	}
+	// .torch-slider__slider
+	&__slider {
+	  // ? padding: margin: это чтоб тень не заризалась
+	  padding: rem(15) rem(19);
+	  margin: 0px rem(-19);
+	}
+	// .torch-slider__swiper
+	&__swiper {
+	 &:not(:last-child) {
+		 @include adaptiveValue("margin-bottom",50 ,30 );
+	 }
+	}
+	// .torch-slider__slide
+	 &__slide {
+	 }
+	 // .torch-slider__dotts
+	 &__dotts {
+	 }
+ }
+ .torch-card {
+	background-color: #fff;
+	display: grid;
+	height: 100%;
+	grid-template-rows: auto 1fr;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease 0s;
+	@media (any-hover: hover) {
+	  &:hover {
+		 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+			-23px 0 20px -23px rgba(0, 0, 0, 0.5),
+			23px 0 20px -23px rgba(0, 0, 0, 0.5);
+		 // inset 0 0 40px rgba(0, 0, 0, .1);
+	  }
+	}
+	// .torch-card__image
+	&__image {
+	 @include adaptiveValue("padding-top",25 ,15 );
+	 @include adaptiveValue("padding-bottom",25 ,15 );
+	 @include adaptiveValue("padding-left",50 ,15 );
+	 @include adaptiveValue("padding-right",50 ,15 );
+	}
+	// .torch-card__item-image-ibg
+	&__item-image-ibg {
+	 display: block;
+	 padding-bottom: percent(240, 270);
+	}
+	// .torch-card__body
+	&__body {
+	  padding: rem(20);
+	  display: flex;
+	  flex-direction: column;
+	}
+	// .torch-card__title
+	&__title {
+	 flex: 1 1 auto;
+	  font-weight: 600;
+	  font-size: rem(20);
+	  line-height: math.div(34, 20);
+	  &:not(:last-child) {
+		 margin-bottom: em(10, 20);
+	  }
+	  @media (any-hover: hover){
+		 &:hover{
+			 // ?подчеркивание текста
+			 text-decoration: underline;
+		 }
+	  }
+	}
+	// .torch-card__link-title
+	&__link-title {
+	}
+	// .torch-card__info
+	&__info {
+	  &:not(:last-child) {
+		 margin-bottom: em(15, 16);
+	  }
+	}
+	// .torch-card__rating
+	&__rating {
+	 justify-content: space-between;
+	  &:not(:last-child) {
+		 margin-bottom: rem(26);
+	  }
+	}
+	// .torch-card__footer
+	&__footer {
+	  border-top: 1px solid rgba(20, 20, 20, 0.5);
+	  padding: rem(20) 0px;
+	  display: flex;
+	  align-items: center;
+	  gap: rem(15);
+	}
+	// .torch-card__price
+	&__price {
+	  flex: 1 1 auto;
+	  font-weight: 600;
+	  font-size: rem(20);
+	  line-height: math.div(34, 20);
+	}
+	// .torch-card__compare
+	// &__compare {
+	// 	font-size: rem(24);
+	// }
+	// ? обьединил для оптимизации, у них много общих стилей
+	&__compare,
+	&__favorite {
+	  font-size: rem(24);
+	  transition: color 0.3s ease 0s;
+	  @media (any-hover: hover) {
+		 &:hover {
+			color: $mainOrangeColor;
+		 }
+	  }
+	}
+	// .torch-card__favorite
+	// &__favorite {
+	// 	font-size: rem(24);
+	// }
+ 
+	// .torch-card__cart
+	&__cart {
+	 width: 100%;
+	  span {
+		 display: flex;
+		 flex-direction: row-reverse;
+		 align-items: center;
+		 justify-content: center;
+		 &::before {
+			margin: 0px 0px 0px rem(16);
+		 }
+	  }
+	}
+ }
+ .info-torch-card {
+	color: #ababab;
+	display: flex;
+	justify-content: space-between;
+	gap: rem(10);
+	font-size: rem(16);
+	// .info-torch-card__size
+	&__size {
+	}
+	// .info-torch-card__materials
+	&__materials {
+	 text-align: right;
+	}
+ }
